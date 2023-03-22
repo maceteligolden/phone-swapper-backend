@@ -12,12 +12,12 @@ export default class UserRepository {
   }
 
   async getUsers(payload: any) {
-    const Users = await readData(UserSchema, payload).populate('wallet');
+    const Users = await readData(UserSchema, payload);
     return Users;
   }
 
   async getUser(payload: any) {
-    const User = await readsingleData(UserSchema, payload).populate('wallet');
+    const User = await readsingleData(UserSchema, payload);
     return User;
   }
 
