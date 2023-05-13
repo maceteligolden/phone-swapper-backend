@@ -7,7 +7,8 @@ const modelschema: Schema = new Schema({
         required: true,
     },
     model: {
-        type: String,
+      type: String,
+      required: true
     },
   created_at: {
     type: Date,

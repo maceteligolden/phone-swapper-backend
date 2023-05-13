@@ -7,7 +7,7 @@ const connect = async () => {
       useNewUrlParser: true,
     };
 
-    await mongoose.connect(`${process.env.MONGO_URL}`, params);
+    await mongoose.connect("mongodb+srv://maceteli:yuppies1998@taskmanager.5niks.mongodb.net/phoneswapper?retryWrites=true&w=majority");
     console.log('connected');
     console.log(process.env.MONGO_URL);
   } catch (err) {

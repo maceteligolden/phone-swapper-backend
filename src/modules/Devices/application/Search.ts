@@ -20,7 +20,7 @@ export default class Search {
     let vendorCount = 0;
 
     devices.map((device: any) => {
-      if (device.provider.name === provider && device.vendor.city === city && device.model.model === model && device.storage_size.size === size) {
+      if (device.provider.name === provider && device.vendor.city === (city) && device.model.model === model && device.storage_size.size === size) {
         estimateNumerator += device.price;
         vendorCount += 1;
       }
@@ -32,7 +32,7 @@ export default class Search {
     if (type === 'Upgrade') {
       
       const filteredResult = devices.filter((device: any) => {
-        return device.vendor.city === city && device.provider.name === desired_provider && device.swap_cost <= (estimate + budget)
+        return device.vendor.city === (city) && device.provider.name === desired_provider && device.swap_cost <= (estimate + budget)
       })
 
       return { result: filteredResult };
